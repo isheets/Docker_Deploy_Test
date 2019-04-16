@@ -43,7 +43,7 @@ ARG DISTRO_NAME=apache-storm-1.2.2
 
 # Download Apache Storm.
 RUN set -ex; \
-    wget -q "http://www.apache.org/dist/storm/$DISTRO_NAME/$DISTRO_NAME.tar.gz"; \
+    wget -q "http://us.mirrors.quenda.co/apache/storm/apache-storm-1.2.2/apache-storm-1.2.2.tar.gz"; \
     export GNUPGHOME="$(mktemp -d)"; \
     tar -xzf "$DISTRO_NAME.tar.gz"; \
     chown -R "$STORM_USER:$STORM_USER" "$DISTRO_NAME"; \
